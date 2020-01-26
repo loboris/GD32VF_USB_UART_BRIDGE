@@ -13,7 +13,7 @@ This project shows how to use **GD32VF103** board as USBtoUART bridge.
 
 * The project implements USB CDC/ACM device with some additional features.
 * Bridging USB to **two** UARTS is supported.
-* Display support, displays status and statictics.
+* Display support, displays status and statistics.
 * Baudrates from 2400 ~ 4000000 Bd are supported
 * Python CDC driver with examples included
 
@@ -76,9 +76,9 @@ The UART ports can be changed using one of two methods:
 
 ### Notes
 
-If _Longan Nano_ is used and `USE_LEDS` enabled in configuration, green LED will be active when `UART1` is selected.
+If _Longan Nano_ is used and `USE_LEDS` is enabled in configuration, green LED will be active when `UART1` is selected.
 
-If _Longan Nano_ is used and `USE_DISPLAY` enabled in configuration, UART format and DTR/RTS status will be shown on display.<br>
+If _Longan Nano_ is used and `USE_DISPLAY` is enabled in configuration, UART format and DTR/RTS status will be shown on display.<br>
 Special CDC command can be used to display the communication statistics (USB number of sent/received bytes, UART number of sent/received byted, number of UART receive errors,...).
 
 DTR and RTS outputs can be configured as push-pull or open colector (`UARTn_RTS_DTR_MODE` define in `lib/usbcdc/include/cdc_acm_core.h`).
@@ -91,7 +91,7 @@ Using `break` for UART change can be disabled/enabled using `UART_USE_BREAK_TO_C
 ```python
 # -------------------------------------------------------
 # Show the current status on the device display (if used)
-# If the 'reset' argument id 1, reset the counters
+# If the 'reset' argument is 1, reset the counters
 # -------------------------------------------------------
 showStatus(reset = 0)
 
@@ -123,7 +123,7 @@ getFormat(prn=False)
 
 # --------------------------------------------
 # Get the current transmition status
-# If 'prn' argument is True, prints the format
+# If 'prn' argument is True, prints the status
 # Returns tuple:
 #   (
 #    active_uart,
